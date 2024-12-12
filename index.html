@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      :root {
+        --bg-color: #f00;
+        --txt-color: #fff;
+      }
+
+      header {
+        background-color: var(--bg-color);
+        color: var(--txt-color);
+        padding: 12px;
+        font-size: 1rem;
+        font-weight: 900;
+      }
+    </style>
+  </head>
+  <body>
+    <header>Header</header>
+    <nav>Nav</nav>
+    <section>Section</section>
+    <article>Article</article>
+    <aside>Aside</aside>
+    <footer></footer>
+
+    <script>
+      function abc() {
+        const obj = {
+          name: "Sam",
+          disp: function () {
+            console.log("args>>>", arguments, this.name);
+          },
+        };
+      }
+
+      abc(2, 3, 4);
+
+      const efg = () => {
+        const obj = {
+          name: "Sam",
+        };
+        console.log("arrow args>>>>", this.name);
+      };
+
+      efg(1, 2, 3);
+    </script>
+  </body>
+</html>
